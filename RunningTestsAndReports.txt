@@ -1,0 +1,21 @@
+Running Tests & Reports
+
+  - Run all tests: npx playwright test (runs all tests in the tests folder across Chromium, Firefox, and WebKit in headless mode)
+  - View HTML report: npx playwright show-report (opens the execution report in a browser)
+
+Parallel Execution
+
+  - Run with multiple workers: npx playwright test --workers 3 (runs tests in parallel instead of sequentially with 1 worker)
+
+Filtering & Targeting Tests
+
+  - Run a specific test file: npx playwright test tests/example.spec.js
+  - Run files matching a keyword: npx playwright test example
+  - Run a specific test by title: npx playwright test -g "homepage has playwright in title"
+  - Run on a specific browser: npx playwright test --project=chromium
+
+Headed Mode & Debugging
+
+  - Run in headed mode (visible browser): npx playwright test --project=chromium --headed
+  - Debug with Playwright Inspector: npx playwright test --project=chromium --debug (opens browser + Inspector to step over actions)
+  - Debug starting at a specific line: npx playwright test tests/example.spec.js:23 --debug
